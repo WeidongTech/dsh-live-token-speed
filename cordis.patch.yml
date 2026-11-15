@@ -1,0 +1,6 @@
+# dsh-live-token-speed 补丁行：把本插件挂进 profile。
+# Client 半会以同 id（'activity'）注册进 conversation.composer.dock，
+# 替换内置 ActivityPill 的全会话平均速度为实时滑动窗口速度。
+- insert:
+    - id: live-token-speed
+      name: 'dsh-live-token-speed'
