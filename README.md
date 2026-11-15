@@ -20,11 +20,32 @@
 
 ## 安装
 
+本机（开发机，直接链本地目录）：
+
 ```powershell
 dsh plugin --profile desktop add "E:/随便玩玩dsh/live-token-speed"
 ```
 
-装完**重启 DSH 桌面版**（宿主启动时才组装插件树，重启后客户端半才会被加载）。
+多机/平板（从 GitHub 拉取，本仓库为 public，无需凭据）：
+
+```powershell
+# 装最新 main
+dsh plugin --profile <你的profile> add github:WeidongTech/dsh-live-token-speed
+
+# 或锁定到某个发布版本
+dsh plugin --profile <你的profile> add github:WeidongTech/dsh-live-token-speed#v0.1.1
+```
+
+更新（平板同理）：
+
+```powershell
+dsh plugin --profile <你的profile> update dsh-live-token-speed
+# 若 pnpm 没解析到新提交，重新 add 一次即可
+```
+
+装完**重启 DSH**（宿主启动时才组装插件树，重启后客户端半才会被加载）。
+
+> 电脑上改完这个插件后：改 `package.json` 的 `version` → `git commit` → `git push`（可选再打 tag），平板执行上面的 update 即可拿到新版本。本机 profile 用的是 `link:` 本地目录，改完重启 DSH 就生效，不需要经过 GitHub；GitHub 只作为平板的发布渠道。
 
 卸载：
 

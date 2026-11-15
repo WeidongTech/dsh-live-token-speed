@@ -1,6 +1,6 @@
 {
   "name": "dsh-live-token-speed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Real-time (sliding-window) token output speed for the DSH composer stats pill — replaces the whole-session average with a live tok/s reading while the model streams.",
   "main": "index.js",
